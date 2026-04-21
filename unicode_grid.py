@@ -80,8 +80,8 @@ def print_grid(url):
     for x, ch, y in points:
         grid[y][x] = ch
 
-    # y = 0 is the top row, matching the doc's coordinate convention.
-    for row in grid:
+    # y = 0 is the bottom row, so print from the highest y downward.
+    for row in reversed(grid):
         print("".join(row).rstrip())
 
 
